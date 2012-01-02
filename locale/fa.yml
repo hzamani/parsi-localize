@@ -1,0 +1,8 @@
+fa:
+  time:
+    formats:
+      default: "%y/%m/%d %H:%M:%S"
+      short: "%d %b، %H:%M"
+      long: "%A، %e %b %Y، ساعت %H:%M:%S (%Z)"
+    am: "قبل از ظهر"
+    pm: "بعد از ظهر"
