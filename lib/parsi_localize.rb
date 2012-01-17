@@ -13,7 +13,10 @@ module I18n
           object.with_parsi_digits
         elsif object.is_a? Date or object.is_a? Time
           jdate = JalaliDate.new object
-          format = I18n.t("time.formats.default") if format == :default
+          if [:default, :short, :long].include? format
+            format = I18n.t("date.formats.#{format}") if object.is_a? Date
+            format = I18n.t("time.formats.#{format}") if object.is_a? Time
+          end
           jdate.strftime(format).with_parsi_digits
         end
       else

@@ -6,3 +6,8 @@ fa:
       long: "%A، %e %b %Y، ساعت %H:%M:%S (%Z)"
     am: "قبل از ظهر"
     pm: "بعد از ظهر"
+  date:
+    formats:
+      default: "%y/%m/%d"
+      short: "%d %b"
+      long: "%A، %e %b %Y"
