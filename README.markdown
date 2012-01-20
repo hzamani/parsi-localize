@@ -6,14 +6,25 @@ This gem contains two sections
 
 ParsiDigits
 -----------
-Simply change digits in a string/integer/float to unicode parsi digits.
-
-Example:
+Simply change digits in a string/integer/float to unicode parsi digits:
 
     require 'parsi_digits'
-    ‪"15,000 تومان".with_parsi_digits => ‫"۱۵,۰۰۰ تومان"
-    123.25.with_parsi_digits => "۱۲۳/۲۵"
+    ‪"15,000 تومان".with_parsi_digits
+      => ‫"۱۵,۰۰۰ تومان"
+    123.25.with_parsi_digits
+      => "۱۲۳/۲۵"
 
+It also dose the reverse action:
+
+    "۱۲۳۴۵".with_western_digits
+      => "12345"
+
+And it undersanad parsi digits (which is useful especially for input forms):
+
+    "۱۲۳۴۵".to_i
+      => 12345
+    "۱۹/۸".to_f
+      => 19.8
 
 ParsiLocalize
 -------------
