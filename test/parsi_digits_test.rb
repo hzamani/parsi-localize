@@ -7,6 +7,20 @@ class ParsiDigitsTest < Test::Unit::TestCase
     assert_equal "۹۸۷۶۵۴۳۲۱۰", "9876543210".with_parsi_digits
   end
   
+  def test_string_with_western_digits
+    assert_equal "9876543210", "۹۸۷۶۵۴۳۲۱۰".with_western_digits
+  end
+  
+  def test_parsi_string_to_i
+    assert_equal 9876543210, "۹۸۷۶۵۴۳۲۱۰".to_i
+    assert_equal 9876543210, "9876543210".to_i
+  end
+  
+  def test_parsi_string_to_f
+    assert_equal 0.987654321, "۰/۹۸۷۶۵۴۳۲۱".to_f
+    assert_equal 0.987654321, "0.987654321".to_f
+  end
+  
   def test_integer_with_parsi_digits
     assert_equal "۹۸۷۶۵۴۳۲۱۰", 9876543210.with_parsi_digits
   end
@@ -15,25 +29,10 @@ class ParsiDigitsTest < Test::Unit::TestCase
     assert_equal "۹/۰۸۷۶۵۴۳۲۱", 9.087654321.with_parsi_digits
   end
   
-  def test_localize_numbers
-    assert_equal "۹۸۷۶۵۴۳۲۱۰",  I18n.l("9876543210")
-    assert_equal "۹۸۷۶۵۴۳۲۱۰",  I18n.l(9876543210)
-    assert_equal "۹/۰۸۷۶۵۴۳۲۱", I18n.l(9.087654321)
-  end
-
-  def test_localize_date_format
-    date = Date.new(2012, 2, 5)
-    assert_equal "۹۰/۱۱/۱۶", I18n.l(date)
-    assert_equal "۹۰/۱۱/۱۶", I18n.l(date, format: :default)
-    assert_equal "۱۶ بهمن", I18n.l(date, format: :short)
-    assert_equal "یک‌شنبه، ۱۶ بهمن ۱۳۹۰", I18n.l(date, format: :long)
-  end
-
-  def test_localize_time_format
-    time = Time.new(2012, 2, 5, 15, 43, 30)
-    assert_equal "۹۰/۱۱/۱۶ ۱۵:۴۳:۳۰", I18n.l(time)
-    assert_equal "۹۰/۱۱/۱۶ ۱۵:۴۳:۳۰", I18n.l(time, format: :default)
-    assert_equal "۱۶ بهمن، ۱۵:۴۳", I18n.l(time, format: :short)
-    assert_equal "یک‌شنبه، ۱۶ بهمن ۱۳۹۰، ساعت ۱۵:۴۳:۳۰ (IRST)", I18n.l(time, format: :long)
+  def test_has_parsi_digits
+    assert "۱۹۴".has_parsi_digits?
+    assert "test۹۸".has_parsi_digits?
+    assert !"123".has_parsi_digits?
+    assert !"test".has_parsi_digits?
   end
 end
