@@ -9,6 +9,11 @@ class ParsiLocalizeTest < Test::Unit::TestCase
     assert_equal "۹/۰۸۷۶۵۴۳۲۱", I18n.l(9.087654321)
   end
 
+  def test_localize_format
+    time = Time.new(2012, 2, 5, 15, 43, 30)
+    assert_equal "۹۰/۱۱/۱۶", I18n.l(time, format: "%y/%m/%d")
+  end
+
   def test_localize_date_format
     date = Date.new(2012, 2, 5)
     assert_equal "۹۰/۱۱/۱۶", I18n.l(date)

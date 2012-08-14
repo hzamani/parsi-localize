@@ -25,5 +25,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency("bundler")
   s.add_development_dependency("rake")
   s.add_dependency("i18n")
+  s.add_dependency("parsi-digits")
   s.add_dependency("jalalidate")
 end
