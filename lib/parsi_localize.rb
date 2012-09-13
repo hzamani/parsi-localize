@@ -4,7 +4,9 @@ require 'i18n'
 
 module I18n
   class << self
-    def localize(object, options = {})
+    def localize(object, options={})
+      return '' if object.nil?
+
       locale = options.delete(:locale) || config.locale
       format = options.delete(:format) || :default
 
