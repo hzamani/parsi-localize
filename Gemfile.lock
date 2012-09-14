@@ -1,0 +1,23 @@
+PATH
+  remote: .
+  specs:
+    parsi-localize (0.2)
+      i18n
+      jalalidate
+      parsi-digits
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    i18n (0.6.0)
+    jalalidate (0.3.1)
+    parsi-digits (0.2)
+    rake (0.9.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler
+  parsi-localize!
+  rake
