@@ -18,12 +18,13 @@ digits to numerics:
     "۱۹/۸".to_f
       => 19.8
 
-To have a real localization of dates in I18n#localize, we uses [`parsi-date`](https://github.com/hzamani/parsi-date) to convert dates to Jalali.
+To have a real localization of dates in I18n#localize (converting them to Jalali date),
+we uses [`parsi-date`](https://github.com/hzamani/parsi-date):
 
     I18n.l Time.now, fromat: "%y/%m/%d %H:%M:%S"
       => "۹۰/۱۰/۱۳ ۰۵:۴۳:۳۲"
 
-As you know, date and time formats can be sored in the locale file.
+As you know, date and time formats can be stored in the locale file.
 For example with
 
     fa:
