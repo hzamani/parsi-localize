@@ -1,5 +1,5 @@
-module I18n
-  module ParsiLocalize
-    VERSION = "0.2.1"
+module Parsi
+  module Localize
+    VERSION = "0.3"
   end
 end

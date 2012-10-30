@@ -27,6 +27,6 @@ class ParsiLocalizeTest < Test::Unit::TestCase
     assert_equal "۹۰/۱۱/۱۶ ۱۵:۴۳:۳۰", I18n.l(time)
     assert_equal "۹۰/۱۱/۱۶ ۱۵:۴۳:۳۰", I18n.l(time, format: :default)
     assert_equal "۱۶ بهمن، ۱۵:۴۳", I18n.l(time, format: :short)
-    assert_equal "یک‌شنبه، ۱۶ بهمن ۱۳۹۰، ساعت ۱۵:۴۳:۳۰ (IRST)", I18n.l(time, format: :long)
+    assert_equal "یک‌شنبه، ۱۶ بهمن ۱۳۹۰، ساعت ۱۵:۴۳:۳۰", I18n.l(time, format: :long)
   end
 end
