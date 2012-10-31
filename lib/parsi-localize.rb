@@ -16,10 +16,10 @@ module I18n
       end
 
       if locale == :fa
-        if object.respond_to?(:with_parsi_digits)
-          object.with_parsi_digits
-        elsif [Date, DateTime, Time, Parsi::Date, Parsi::DateTime].include? object.class
+        if object.respond_to?(:to_jalali)
           object.to_jalali.strftime(format).with_parsi_digits
+        elsif object.respond_to?(:with_parsi_digits)
+          object.with_parsi_digits
         else
           config.backend.localize locale, object, format, options
         end
