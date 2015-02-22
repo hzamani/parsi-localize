@@ -10,7 +10,7 @@ module I18n
       locale = options.delete(:locale) || config.locale
       format = options.delete(:format) || :default
 
-      if [:default, :short, :long].include? format
+      if format.is_a? Symbol
         format = I18n.t("date.formats.#{format}") if object.is_a? Date
         format = I18n.t("time.formats.#{format}") if object.is_a? Time
       end
