@@ -1,23 +1,23 @@
 PATH
   remote: .
   specs:
-    parsi-localize (0.3)
-      i18n
-      parsi-date (>= 0.2.2)
-      parsi-digits (>= 0.3)
+    parsi-localize (0.3.2)
+      i18n (~> 0.7)
+      parsi-date (~> 0.2.2)
+      parsi-digits (~> 0.3)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    i18n (0.6.1)
-    parsi-date (0.2.2)
+    i18n (0.7.0)
+    parsi-date (0.2.6)
     parsi-digits (0.3)
-    rake (0.9.2.2)
+    rake (0.9.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
+  bundler (~> 1.7)
   parsi-localize!
-  rake
+  rake (~> 0.9)
