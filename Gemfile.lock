@@ -1,16 +1,16 @@
 PATH
   remote: .
   specs:
-    parsi-localize (0.3.2)
+    parsi-localize (0.3.3)
       i18n (~> 0.7)
-      parsi-date (~> 0.2.2)
+      parsi-date (~> 0.3)
       parsi-digits (~> 0.3)
 
 GEM
   remote: http://rubygems.org/
   specs:
     i18n (0.7.0)
-    parsi-date (0.2.6)
+    parsi-date (0.3.0)
     parsi-digits (0.3)
     rake (0.9.6)
 

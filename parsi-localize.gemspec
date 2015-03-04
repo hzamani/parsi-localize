@@ -27,5 +27,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency("rake", "~> 0.9")
   s.add_dependency("i18n", "~> 0.7")
   s.add_dependency("parsi-digits", "~> 0.3")
-  s.add_dependency("parsi-date", "~> 0.2.2")
+  s.add_dependency("parsi-date", "~> 0.3")
 end
